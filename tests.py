@@ -2,7 +2,7 @@ import unittest
 import os
 import checkpoint as ch
 
-class HenryChallenge(unittest.TestCase):
+class Ejercicios(unittest.TestCase):
     
     def test_ListaDivisibles_01(self):
       lista_test = ch.ListaDivisibles(12, 10)
@@ -138,7 +138,7 @@ hc_fallas = len(resultado_test.result.failures)
 hc_errores = len(resultado_test.result.errors)
 hc_ok = hc_tests - hc_fallas - hc_errores
 
-class HenryChallenge_ExtraCredit(unittest.TestCase):
+class Complicado(unittest.TestCase):
 
     def test_OrdenarDiccionario_01(self):
       dicc = {'clave1':['c','a','b'], 'clave2':['casa','auto','barco'], 'clave3':[1,2,3]}
@@ -164,11 +164,12 @@ hce_fallas = len(resultado_test.result.failures) - hc_fallas
 hce_errores = len(resultado_test.result.errors) - hc_errores
 hce_ok = hce_tests - hce_fallas - hce_errores
 
-archivo_test = open('resultado_test.csv', 'w')
-archivo_test.write('Tipo,Total_Tests,Total_Fallas,Total_Errores,Total_Correctos\n')
-archivo_test.write('Credit,'+str(hc_tests)+','+str(hc_fallas)+','+str(hc_errores)+','+str(hc_ok)+'\n')
-archivo_test.write('ExtraCredit,'+str(hce_tests)+','+str(hce_fallas)+','+str(hce_errores)+','+str(hce_ok)+'\n')
-archivo_test.close()
+#Caso quiera salvar los resultados en un archivo .csv externo
+#archivo_test = open('resultado_test.csv', 'w') 
+#archivo_test.write('Tipo,Total_Tests,Total_Fallas,Total_Errores,Total_Correctos\n')
+#archivo_test.write('Credit,'+str(hc_tests)+','+str(hc_fallas)+','+str(hc_errores)+','+str(hc_ok)+'\n')
+#archivo_test.write('ExtraCredit,'+str(hce_tests)+','+str(hce_fallas)+','+str(hce_errores)+','+str(hce_ok)+'\n')
+#archivo_test.close()
 
 print('Resumen')
 print('Total Tests:', str(hc_tests))
